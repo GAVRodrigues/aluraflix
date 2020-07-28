@@ -1,13 +1,17 @@
 import React from 'react';
-import Menu from '../../components/Menu';
+import PageDefault from '../../components/PageDefault';
+import { Link } from 'react-router-dom';
 
 function Error() {
   return (
-    <div style={{ background: "white" }}>
-      <Menu />
-      ERROR
-    </div>
-  )
-}
+    <PageDefault>
+      <h1>Página não encontrada!</h1>
 
-export default Error;
+      <Link to="/">
+        Ir para Home
+      </Link>
+    </PageDefault>
+  );
+};
+
+export default Error

@@ -21,9 +21,8 @@ function CadastroCategoria() {
         </button>
       </form>
 
-
       <Link to="/">
-        Ir para home
+        Ir para Home
       </Link>
     </PageDefault>
   )
