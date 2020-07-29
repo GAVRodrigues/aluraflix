@@ -16,6 +16,7 @@ const Container = styled.ul`
     transform: initial;
     &:before {
       font-size: 30px;
+      color: ${props => props.arrowColor || 'white'};
     }
   }
   
@@ -38,8 +39,8 @@ export const SliderItem = styled.li`
 `;
 
 
-const Slider = ({ children }) => (
-  <Container>
+const Slider = ({ arrowColor, children }) => (
+  <Container arrowColor={arrowColor}>
     <SlickSlider {...{
       dots: false,
       infinite: true,
