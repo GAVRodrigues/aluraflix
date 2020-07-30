@@ -28,18 +28,18 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    if (window.location.href.includes('localhost')) {
-      const URL = 'http://localhost:8080/categorias';
-      fetch(URL)
-        .then(async (response) => {
-          if (response.ok) {
-            const result = await response.json();
-            setCategorias(result);
-            return;
-          }
-          throw new Error('Não foi possível pegar os dados');
-        });
-    }
+    const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://aluraflix.herokuapp.com/categorias';
+    fetch(URL)
+      .then(async (response) => {
+        if (response.ok) {
+          const result = await response.json();
+          setCategorias(result);
+          return;
+        }
+        throw new Error('Não foi possível pegar os dados');
+      });
   }, []);
 
   return (
