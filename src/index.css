@@ -29,3 +29,13 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+::-webkit-scrollbar { 
+  background-color: #141414; 
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb { 
+  background-color: var(--primary);
+  border-radius: 5px;
+}
