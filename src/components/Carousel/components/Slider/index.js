@@ -16,10 +16,9 @@ const Container = styled.ul`
     transform: initial;
     &:before {
       font-size: 30px;
-      color: ${props => props.arrowColor || 'white'};
+      color: ${(props) => props.categoryColor || 'white'};
     }
   }
-  
   .slick-prev {
     left: 0;
   }
@@ -38,9 +37,9 @@ export const SliderItem = styled.li`
   }
 `;
 
-
-const Slider = ({ arrowColor, children }) => (
-  <Container arrowColor={arrowColor}>
+// eslint-disable-next-line react/prop-types
+const Slider = ({ categoryColor, children }) => (
+  <Container categoryColor={categoryColor}>
     <SlickSlider {...{
       dots: false,
       infinite: true,
@@ -55,4 +54,4 @@ const Slider = ({ arrowColor, children }) => (
   </Container>
 );
 
-export default Slider; 
+export default Slider;
