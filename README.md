@@ -1,5 +1,5 @@
 <h2 align="center"> 
-Imersão React - AluraFlix  <img alt="Logo Alura" width="80px" src="https://www.alura.com.br/assets/img/imersoes/react/imersao-react-logo.1594044142.svg" />
+Imersão React - AluraFlix  <img alt="Logo Alura" width="80px" src="./assets/logo-alura.svg" />
 
 </h2>
 <p align="center">
