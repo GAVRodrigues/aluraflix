@@ -16,30 +16,61 @@ const Container = styled.ul`
     transform: initial;
     &:before {
       font-size: 30px;
-      color: ${(props) => props.categoryColor || 'white'};
     }
   }
+  
   .slick-prev {
     left: 0;
+    width: 35px;
+    background-color: #00000040;
+    height: 100%;
   }
   .slick-next {
-    right: 16px;
+    right: 0;
+    background-color: #00000040;
+    width: 35px;
+    height: 100%;
+  }
+
+  @media (max-width: 640px) {
+    .slick-prev, .slick-next {
+      background-color: #00000000;
+    }
+    
+    .slick-prev:before, .slick-next:before {
+      display: none;
+    }
+  }
+
+  .slick-prev:before {
+    font-family: "Font Awesome\ 5 Free";
+    content: "\f053";
+    font-size: 30px;
+    font-weight: 900;
+  }
+  .slick-next:before {
+    font-family: "Font Awesome\ 5 Free";
+    content: "\f054";
+    font-size: 30px;
+    font-weight: 900;
   }
 `;
 
 export const SliderItem = styled.li`
-  margin-right: 16px;
+  margin-right: 4px;
   img {
     margin: 16px;
-    width: 298px;
-    height: 197px;
     object-fit: cover;
+  }
+  a:hover {
+    transition:500ms;
+    transform:scale(1.2);
+    margin:0 30px 0 30px;
   }
 `;
 
-// eslint-disable-next-line react/prop-types
-const Slider = ({ categoryColor, children }) => (
-  <Container categoryColor={categoryColor}>
+const Slider = ({ children }) => (
+  <Container>
     <SlickSlider {...{
       dots: false,
       infinite: true,
@@ -47,6 +78,8 @@ const Slider = ({ categoryColor, children }) => (
       centerMode: false,
       variableWidth: true,
       adaptiveHeight: true,
+      slidesToShow: 5,
+      slidesToScroll: 3,
     }}
     >
       {children}

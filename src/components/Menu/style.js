@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const LogoImage = styled.img`
-  max-width: 100px;
+  max-width: 120px;
+  padding-top: 5px;
 
 @media (max-width: 800px) {
-    max-width: 105px;
+    max-width: 90px;
   }
 `;
 
@@ -17,10 +18,8 @@ export const MenuWrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   padding-left: 5%;
   padding-right: 5%;
 
