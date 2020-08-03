@@ -42,7 +42,7 @@ $ cd aluraflix
 # Instalar dependências 
 $ npm install
 
-# Inicie o servidor
+# Inicie a aplicação
 $ npm run dev
 ```
 
