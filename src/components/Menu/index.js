@@ -7,7 +7,7 @@ function Menu() {
   return (
     <MenuWrapper className="Menu">
       <Link to="/">
-        <LogoImage className="Logo" src={Logo} alt="AluraFlix Logo" />
+        <LogoImage className="Logo" src={Logo} alt="Aluraflix Logo" />
       </Link>
 
       <ButtonLink as={Link} className="ButtonLink" to="/cadastro/video" />
